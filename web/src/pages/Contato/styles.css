@@ -1,0 +1,7 @@
+.contato {
+  width: 100%;
+  grid-area: contato;
+}
+.contato-container {
+  padding: 21px 34px;
+}

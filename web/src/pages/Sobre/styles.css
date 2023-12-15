@@ -1,0 +1,7 @@
+.sobre {
+  width: 100%;
+  grid-area: sobre;
+}
+.sobre-container {
+  padding: 21px 34px;
+}

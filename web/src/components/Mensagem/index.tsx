@@ -1,15 +1,30 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useContext } from "react";
+import PostService from "../../http/PostService";
+// import messagesContext from "../../context/messagesContext"; ESTADO GLOBAL CONTEXT
 import "./styles.css";
 
 
 const Mensagem = () => {
-  const [autor, setAutor] = useState("")
-  const [mensagem, setMensagem] = useState("")
-  
-  const savePost = (event:FormEvent) => {
-    event?.preventDefault()
-    console.log(`salvando usuario ${autor} e mensagem ${mensagem}`)
+  const initial_state = {
+    autor: '',
+    mensagem: ''
   }
+  // const { posts, setPosts } = useContext(messagesContext);
+  const [post, setPost] = useState(initial_state)
+  const clearState = () => setPost(initial_state)
+  const savePost = async (event:FormEvent) => {
+    event?.preventDefault()
+    console.log(`salvando usuario ${post.autor} e mensagem ${post.mensagem}`)
+    await PostService.save({ ...post })
+    clearState()
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement> |
+     React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setPost({...post, [name]: value})
+  };
+
 
   return (
     <>
@@ -24,13 +39,15 @@ const Mensagem = () => {
 
             <label htmlFor="autor">
               <input type="text" name="autor" 
-                value={autor} onChange={e => setAutor(e.target.value)}
+                value={post.autor}
+                onChange={ handleChange }
                 placeholder="Me diga seu nome?" />
             </label>
 
             <label htmlFor="mensagem">
               <textarea name="mensagem" id="mensagem" cols={100} rows={5} 
-                value={mensagem} onChange={e => setMensagem(e.target.value)}
+                onChange={ handleChange }
+                value={post.mensagem}
                 placeholder="Escreva uma mensagem legal..."></textarea>
             </label>
             

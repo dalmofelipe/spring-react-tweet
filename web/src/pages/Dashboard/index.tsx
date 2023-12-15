@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Local from "../../types/Local";
 import "./styles.css";
-import getLocal from "../../http/ipApi";
+import LocationService from "../../http/LocationService";
 
 let localReset:Local = {
   ip: "",
@@ -17,13 +17,12 @@ const Dashboard = (props: any) => {
 
   const getLocationData = () => {
     async function getData() {
-      setLocal(await getLocal());
+      setLocal(await LocationService.location());
     }
     getData();
   };
 
   const clearLocationData = () => {
-    console.log("Limpar");
     setLocal(localReset);
   };
 

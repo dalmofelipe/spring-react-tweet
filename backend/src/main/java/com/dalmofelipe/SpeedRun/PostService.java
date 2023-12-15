@@ -12,7 +12,8 @@ public class PostService {
     private PostRepository postRepository;
 
     public List<Post> findAll() {
-        return this.postRepository.findAll();
+        return this.postRepository.findAllByOrderByIdDesc();
+        // return this.postRepository.findAll();
     }
 
     public Post save(PostDto dto) {

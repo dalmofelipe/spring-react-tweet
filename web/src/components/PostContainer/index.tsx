@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
+import PostService from "../../http/PostService";
 import Post from "../../types/Post";
-import "./styles.css";
-import PostsApi from "../../http/PostsApi";
 import PostDetail from "../PostDetail";
+import "./styles.css";
 
 
 const PostContainer = () => {
@@ -10,14 +10,14 @@ const PostContainer = () => {
 
   const getPostsData = () => {
     async function getData() {
-      setPosts(await PostsApi.getAllPosts());
+      setPosts(await PostService.list());
     }
     getData();
   };
 
   useEffect(() => {
     getPostsData()
-  }, [])
+  }, [posts])
 
   const listPosts = posts?.map(
     (p, index) => <PostDetail key={index} autor={p.autor} mensagem={p.mensagem}/>

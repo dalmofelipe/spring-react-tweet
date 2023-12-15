@@ -77,6 +77,4 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  border-top: 3px solid var(--cor-destaque);
 }

@@ -4,6 +4,8 @@
   background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: fixed;
+
+  border-top: 3px solid var(--cor-destaque);
 }
 .header-container {
   display: flex;

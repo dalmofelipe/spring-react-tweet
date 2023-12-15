@@ -27,10 +27,7 @@ const PostContainer = () => {
     <>
       <div className="posts">
         <div className="posts-container container">
-          <h3>Feed</h3>
-
           {listPosts || "Nenhum Post encontrado..."}
-
         </div>
       </div>
     </>

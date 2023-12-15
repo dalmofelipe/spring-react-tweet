@@ -1,0 +1,45 @@
+.mensagem {
+  width: 100%;
+  margin-top: 34px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mensagem-container {
+  padding: 21px;
+}
+.mensagem-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mensagem-container form label {
+  width: 100%;
+}
+.mensagem-container form label input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px;
+}
+.mensagem-container form label textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px;
+}
+.mensagem-container form button {
+  width: 100%;
+  padding: 8px;
+  background-color: var(--cor-destaque);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+.mensagem-container form button:hover {
+  background-color: var(--cor-destaque-hover);
+}

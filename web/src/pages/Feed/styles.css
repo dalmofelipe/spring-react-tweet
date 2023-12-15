@@ -1,0 +1,8 @@
+.feed {
+  width: 100%;
+  grid-area: feed;
+  margin-top: 45px;
+}
+.feed-container {
+  padding: 21px 34px;
+}

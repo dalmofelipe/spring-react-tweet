@@ -1,0 +1,18 @@
+.post-detail {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.post-detail h3 {
+  font-weight: bolder;
+  color: var(--cor-destaque);
+}
+.post-detail p {
+  color: #343434;
+}

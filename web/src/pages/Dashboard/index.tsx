@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Local from "../../types/Local";
 import "./styles.css";
 import getLocal from "../../http/ipApi";
@@ -27,9 +27,9 @@ const Dashboard = (props: any) => {
     setLocal(localReset);
   };
 
-  // useEffect(() => {
-  //   getLocationData();
-  // }, []);
+  useEffect(() => {
+    getLocationData();
+  }, []);
 
   return (
     <>

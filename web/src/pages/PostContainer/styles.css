@@ -1,0 +1,11 @@
+.posts {
+  width: 100%;
+  grid-area: post;
+}
+.posts-container {
+  padding: 21px 34px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

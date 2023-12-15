@@ -1,18 +1,23 @@
 .post-detail {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
 
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: white;
-  padding: 10px;
+  padding: 21px;
   border-radius: 5px;
 }
 .post-detail h3 {
+  width: 300px;
+  text-wrap: nowrap;
   font-weight: bolder;
   color: var(--cor-destaque);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .post-detail p {
+  width: 690px;
   color: #343434;
 }

@@ -9,9 +9,9 @@
 :root {
   --background: #f5f6f7;
   --text-color: #555;
-  --cor-destaque: rgb(20, 216, 183);
-  --cor-destaque-hover: rgb(18, 165, 140);
-  --maxwidth: 1300px;
+  --cor-destaque: rgb(20, 138, 216);
+  --cor-destaque-hover: rgb(52, 155, 180);
+  --maxwidth: 1000px;
 }
 
 .container {
@@ -78,5 +78,5 @@ body {
   flex-direction: column;
   gap: 20px;
 
-  border-top: 5px solid var(--cor-destaque);
+  border-top: 3px solid var(--cor-destaque);
 }

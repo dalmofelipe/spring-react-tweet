@@ -27,9 +27,9 @@ const Dashboard = (props: any) => {
     setLocal(localReset);
   };
 
-  useEffect(() => {
-    getLocationData();
-  }, []);
+//  useEffect(() => {
+//    getLocationData();
+//  }, []);
 
   return (
     <>

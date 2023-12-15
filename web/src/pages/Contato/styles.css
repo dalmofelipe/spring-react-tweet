@@ -1,6 +1,7 @@
 .contato {
   width: 100%;
   grid-area: contato;
+  margin-top: 100px;
 }
 .contato-container {
   padding: 21px 34px;

@@ -19,8 +19,9 @@ const PostContainer = () => {
     getPostsData()
   }, [])
 
-  //const listPosts = posts.map(p => <p>{p.autor} - {p.mensagem}</p>)
-  const listPosts = posts?.map(p => <PostDetail autor={p.autor} mensagem={p.mensagem}/>)
+  const listPosts = posts?.map(
+    (p, index) => <PostDetail key={index} autor={p.autor} mensagem={p.mensagem}/>
+  )
 
   return (
     <>

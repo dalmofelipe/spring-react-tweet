@@ -1,16 +1,17 @@
 .header {
   width: 100%;
   grid-area: header;
+  background-color: white;
 }
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 55px 34px;
+  padding: 15px 14px;
 }
 .logo a {
-  font-size: 2.15rem;
+  font-size: 1.55rem;
   font-weight: 700;
 
   display: flex;

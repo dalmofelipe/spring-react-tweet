@@ -10,7 +10,7 @@ const Header = () => {
         <div className="header-container container">
           <div className="logo">
             <Link to="/">
-              <SiPreact /> <span>LOGO</span>
+              <SiPreact /> <span>tt</span>
             </Link>
           </div>
 

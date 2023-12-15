@@ -5,7 +5,7 @@ const Contato = () => {
     <>
       <div className="contato">
         <div className="contato-container container">
-          <h1>CONTATO</h1>
+          <h3>CONTATO</h3>
         </div>
       </div>
     </>

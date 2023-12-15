@@ -10,7 +10,7 @@ const PostContainer = () => {
 
   const getPostsData = () => {
     async function getData() {
-      setPosts(await await PostsApi.getAllPosts());
+      setPosts(await PostsApi.getAllPosts());
     }
     getData();
   };
@@ -20,15 +20,15 @@ const PostContainer = () => {
   }, [])
 
   //const listPosts = posts.map(p => <p>{p.autor} - {p.mensagem}</p>)
-  const listPosts = posts.map(p => <PostDetail autor={p.autor} mensagem={p.mensagem}/>)
+  const listPosts = posts?.map(p => <PostDetail autor={p.autor} mensagem={p.mensagem}/>)
 
   return (
     <>
       <div className="posts">
         <div className="posts-container container">
-          <h1>Feed</h1>
+          <h3>Feed</h3>
 
-          {listPosts}
+          {listPosts || "Nenhum Post encontrado..."}
 
         </div>
       </div>

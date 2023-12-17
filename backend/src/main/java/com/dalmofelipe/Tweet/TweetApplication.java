@@ -1,13 +1,13 @@
-package com.dalmofelipe.SpeedRun;
+package com.dalmofelipe.Tweet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpeedRunApplication {
+public class TweetApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpeedRunApplication.class, args);
+		SpringApplication.run(TweetApplication.class, args);
 	}
 
 }

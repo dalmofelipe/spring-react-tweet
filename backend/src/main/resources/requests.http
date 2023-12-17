@@ -1,0 +1,16 @@
+@url = http://localhost:8000
+
+
+### Lista todos tts
+GET {{url}}/api/tweets HTTP/1.1
+
+
+
+### Cria um novo tt
+POST {{url}}/api/tweets HTTP/1.1
+Content-Type: application/json
+
+{
+    "autor": "Teste",
+    "mensagem": "Os testes testam!"
+}

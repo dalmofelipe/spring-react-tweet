@@ -1,4 +1,4 @@
-package com.dalmofelipe.SpeedRun;
+package com.dalmofelipe.Tweet.controllers;
 
 import java.util.List;
 
@@ -6,30 +6,37 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dalmofelipe.Tweet.dtos.TweetDto;
+import com.dalmofelipe.Tweet.exceptions.ApiError;
+import com.dalmofelipe.Tweet.models.Tweet;
+import com.dalmofelipe.Tweet.services.TweetService;
+
 
 @RestController
-@RequestMapping("/api/posts")
-public class PostEndpoint {
+@RequestMapping("/api/tweets")
+@CrossOrigin(origins = "http://localhost:3000")
+public class TweetEndpoint {
     
     @Autowired
-    private PostService postService;
+    private TweetService tweetService;
 
     @GetMapping
-    public  List<Post> findAll() {
-        return this.postService.findAll();
+    public  List<Tweet> findAll() {
+        return this.tweetService.findAll();
     }
 
     @PostMapping
-    public ResponseEntity<Object> save(@Validated @RequestBody PostDto dto) {
+    public ResponseEntity<Object> save(@Validated @RequestBody TweetDto dto) {
         try{
-            var post = this.postService.save(dto);
-            return ResponseEntity.ok().body(post);
+            var tweet = this.tweetService.save(dto);
+            return ResponseEntity.ok().body(tweet);
         }
         catch(InternalError e) {
             var err = new ApiError();

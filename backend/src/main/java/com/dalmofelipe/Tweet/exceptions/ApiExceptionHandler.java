@@ -1,4 +1,4 @@
-package com.dalmofelipe.SpeedRun;
+package com.dalmofelipe.Tweet.exceptions;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;

@@ -1,5 +1,5 @@
 import Mensagem from "../../components/Mensagem";
-import PostContainer from "../../components/PostContainer";
+import TweetContainer from "../../components/TweetContainer";
 import "./styles.css";
 
 const Feed = () => {
@@ -8,7 +8,7 @@ const Feed = () => {
       <div className="feed">
         <div className="feed-container container">
             <Mensagem />
-            <PostContainer />
+            <TweetContainer />
         </div>
       </div>
     </>

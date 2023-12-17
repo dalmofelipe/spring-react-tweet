@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import LocationService from "../../http/LocationService";
 import Local from "../../types/Local";
 import "./styles.css";
-import LocationService from "../../http/LocationService";
 
 let localReset:Local = {
   ip: "",

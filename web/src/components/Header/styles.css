@@ -14,7 +14,11 @@
 
   padding: 15px 0px;
 }
+.logo a svg {
+  font-size: 2rem;
+}
 .logo a {
+  color: var(--cor-destaque);
   font-size: 1.55rem;
   font-weight: 700;
 
@@ -22,6 +26,9 @@
   justify-content: flex-start;
   align-items: center;
   gap: 13px;
+}
+.logo a:hover {
+  color: var(--text-color);
 }
 
 .header-menu ul {
@@ -33,13 +40,13 @@
   margin: 0;
 }
 .header-menu ul li a {
-  color: var(--textcolor);
+  color: var(--cor-destaque);
   text-decoration: none;
   font-size: 17px;
   /* font-weight: bold; */
-  padding: 21px 10px;
+  padding: 21px 15px;
   transition: color 0.2s ease;
 }
 .header-menu ul li a:hover {
-  color: var(--cor-destaque);
+  color: var(--text-color);
 }

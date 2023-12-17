@@ -1,21 +1,21 @@
 import { useState } from "react";
-import ContextPost from "../types/ContextPost"
-import messagesContext from "./messagesContext";
-import Post from "../types/Post";
+import Tweet from "../types/Tweet";
+import MessagesContext from "./MessagesContext";
+
 
 function MessagesProvider ({ children } : { children: React.ReactNode }) {
 
-    const [ posts, setPosts ] = useState<Post[]>([]);
+    const [ tweets, setTweets ] = useState<Tweet[]>([]);
 
-    const postContext = {
-        posts,
-        setPosts,
+    const tweetContext = {
+        tweets,
+        setTweets,
     };
 
     return (
-        <messagesContext.Provider value={postContext}>
+        <MessagesContext.Provider value={tweetContext}>
             {children}
-        </messagesContext.Provider>
+        </MessagesContext.Provider>
     );
 };
 

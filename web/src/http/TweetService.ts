@@ -1,7 +1,7 @@
 import axios from "axios";
-import Post from "../types/Post";
+import Tweet from '../types/Tweet'
 
-const baseUrl: string = "http://localhost:8000/api/posts";
+const baseUrl: string = "http://localhost:8000/api/tweets";
 
 
 const list = async () => {
@@ -12,8 +12,8 @@ const list = async () => {
 };
 
 
-const save = async (post:Post) => {
-  let data: any = await axios.post(baseUrl, post, {
+const save = async (tweet:Tweet) => {
+  let data: any = await axios.post(baseUrl, tweet, {
       headers: {
         'Content-Type': 'application/json'
       }

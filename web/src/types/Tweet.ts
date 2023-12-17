@@ -1,6 +1,6 @@
-interface Post {
+interface Tweet {
     autor:string 
     mensagem: string
 }
 
-export default Post;
+export default Tweet;

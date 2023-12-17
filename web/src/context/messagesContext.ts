@@ -1,7 +1,6 @@
 import { createContext } from "react";
-import Post from "../types/Post";
-import ContextPost from "../types/ContextPost";
+import TweetContext from "../types/TweetContext";
 
-const messagesContext = createContext({} as ContextPost);
+const MessagesContext = createContext({} as TweetContext);
 
-export default messagesContext;
+export default MessagesContext;

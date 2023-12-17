@@ -1,4 +1,4 @@
-.post-detail {
+.tweet-detail {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -10,14 +10,14 @@
   padding: 21px;
   border-radius: 5px;
 }
-.post-detail h3 {
+.tweet-detail h3 {
   width: 300px;
   text-wrap: nowrap;
   font-weight: bolder;
   color: var(--cor-destaque);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-.post-detail p {
+.tweet-detail p {
   width: 690px;
   color: #343434;
 }

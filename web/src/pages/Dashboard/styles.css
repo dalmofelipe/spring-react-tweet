@@ -4,11 +4,18 @@
   margin-top: 100px;
 }
 .dashboard-container {
-  padding: 21px 34px;
+  padding: 21px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .dashboard-btns {
   padding: 21px;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
 }

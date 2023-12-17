@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SiPreact } from "react-icons/si";
+import { AiOutlineTwitter } from "react-icons/ai";
 
 import "./styles.css";
 
@@ -10,7 +10,7 @@ const Header = () => {
         <div className="header-container container">
           <div className="logo">
             <Link to="/">
-              <SiPreact /> <span>tt</span>
+              <AiOutlineTwitter /> <span>tweets</span>
             </Link>
           </div>
 
@@ -20,7 +20,7 @@ const Header = () => {
                 <Link to="/">início</Link>
               </li>
               <li>
-                <Link to="/posts">feed</Link>
+                <Link to="/feed">feed</Link>
               </li>
               <li>
                 <Link to="/contato">contato</Link>

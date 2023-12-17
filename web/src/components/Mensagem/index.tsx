@@ -1,28 +1,31 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
+import MessagesContext from "../../context/MessagesContext";
 import TweetService from "../../http/TweetService";
-// import MessagesContext from "../../context/MessagesContext"; ESTADO GLOBAL CONTEXT
 import "./styles.css";
 
 
 const Mensagem = () => {
+
   const initial_state = {
     autor: '',
     mensagem: ''
   }
-  // const { posts, setPosts } = useContext(MessagesContext);
-  const [post, setPost] = useState(initial_state)
-  const clearState = () => setPost(initial_state)
-  const savePost = async (event:FormEvent) => {
+  const clearState = () => setTweet(initial_state)
+  const [ tweet, setTweet ] = useState(initial_state)
+  const { tweets, setTweets } = useContext(MessagesContext);
+
+  const saveTweet = async (event:FormEvent) => {
     event?.preventDefault()
-    console.log(`salvando usuario ${post.autor} e mensagem ${post.mensagem}`)
-    await TweetService.save({ ...post })
+    console.log(`salvando usuario ${tweet.autor} e mensagem ${tweet.mensagem}`)
+    await TweetService.save({ ...tweet })
+    setTweets([tweet, ...tweets])
     clearState()
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> |
      React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setPost({...post, [name]: value})
+    setTweet({...tweet, [name]: value})
   };
 
 
@@ -35,11 +38,11 @@ const Mensagem = () => {
             Tweetando!
           </h3>
 
-          <form onSubmit={savePost}>
+          <form onSubmit={saveTweet}>
 
             <label htmlFor="autor">
               <input type="text" name="autor" 
-                value={post.autor}
+                value={tweet.autor}
                 onChange={ handleChange }
                 placeholder="Me diga seu nome?" />
             </label>
@@ -47,7 +50,7 @@ const Mensagem = () => {
             <label htmlFor="mensagem">
               <textarea name="mensagem" id="mensagem" cols={100} rows={5} 
                 onChange={ handleChange }
-                value={post.mensagem}
+                value={tweet.mensagem}
                 placeholder="Escreva uma mensagem legal..."></textarea>
             </label>
             
